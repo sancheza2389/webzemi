@@ -1,0 +1,47 @@
+//Vendor Prefixes for flex displays
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+
+@mixin website-font(){
+  font-family: 'Raleway', sans-serif;
+}
+
+
+//      **BUTTON HOVER EFFECT**
+
+@mixin hover{
+  -webkit-box-shadow: inset 0px 0px 2px 3px rgba($green,0.09);
+  box-shadow: inset 0px 0px 2px 3px rgba($green,0.09);
+}
+
+
+//   ***Scew for section***
+@mixin sectionScew{
+  -moz-transform: skew(0deg, -5deg);
+  -webkit-transform: skew(0deg, -5deg);
+  -o-transform: skew(0deg, -5deg);
+  -ms-transform: skew(0deg, -5deg);
+  transform: skew(0deg, -5deg);
+}

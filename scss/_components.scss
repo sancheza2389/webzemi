@@ -1,0 +1,155 @@
+/*
+    floating green arrow ex. in hero section
+*/
+//  ***Floating animation***
+@keyframes floatinArrow {
+  0%{transform: translateY(-10px);}
+  50%{transform: translateY(10px);}
+  100%{transform: translateY(-10px);}
+}
+//   ***Arrow container***
+.arrow{
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  -webkit-animation: floatinArrow 5s infinite; /* Safari 4+ */
+  -moz-animation: floatinArrow 5s infinite; /* Fx 5+ */
+  -o-animation: floatinArrow 5s infinite; /* Opera 12+ */
+  animation: floatinArrow 5s infinite;
+  //  ***Arrow Structure***
+  &-inner{
+    height: 30px;
+    width: 30px;
+    border-left: 4px solid $green;
+    border-bottom: 4px solid $green;
+    transform: rotate(-45deg);
+  }
+}
+/*
+    end of green arrow
+*/
+
+//Highlighted text
+.highlight{
+  color: $green !important;
+}
+
+//Font Weight
+.bold{
+  font-weight: 800;
+}
+.thin{
+  font-weight: 300;
+}
+
+//Heading
+.heading{
+  color: $blue-drk;
+  //Main Heading
+  &-lrg{
+    font-family: $heading-text;
+    font-size: 70px;
+
+    @media only screen and (max-width: 1700px){
+      font-size: 60px;
+    }
+    @media only screen and (max-width: 500px){
+      font-size: 30px;
+    }
+  }
+  //Sub Heading
+  &-sub{
+    font-family: $content-text;
+    font-size: 30px;
+    line-height: 40px;
+
+
+    @media only screen and (max-width: 800px){
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &-small{
+    font-size: 25px;
+    font-family: $content-text;
+
+    @media only screen and (max-width: 800px){
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+//section divider
+.divider{
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 800px){
+    min-height: 250px;
+  }
+  //First divider background
+  &-1{
+    background-image: url("images/backgrounds/our-work.png");
+  }
+  &-2{
+    background-image: url("https://ik.imagekit.io/webzemi/Untitled_design__23__ZSH8Vm7EF.png?updatedAt=1632951801763");
+  }
+}
+
+//inner section content
+.section-content{
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1120px){
+    max-width: 800px;
+    left: 0;
+    padding: 100px 25px;
+  }
+  @media only screen and (max-width: 600px){
+    width: 100%;
+    margin: auto 0;
+    padding-bottom: 0px;
+  }
+}
+
+//Required inputs
+.required{
+  color: $green;
+  text-align: right;
+}
+
+//buttons
+.button{
+  background-color: $green;
+  padding: 19px 46px 18px 46px;
+  color: $white;
+  border: none;
+  font-family: $heading-text;
+  font-size: 15px;
+  transition: all .2s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+
+  &:hover{
+    cursor: pointer;
+    background-color: $black;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+//disabled elements
+.disabled{
+  opacity: 0;
+  z-index: -1!important;
+}

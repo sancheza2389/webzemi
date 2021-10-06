@@ -1,0 +1,64 @@
+@import "mixins";
+@import "variables";
+
+
+.grid-container {
+  display: grid;
+
+  &__single-row{
+
+  }
+
+
+  &-1{
+    grid-template-columns: auto auto auto;
+    margin-top: 400px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+}
+
+.grid-item__
+
+
+
+
+
+
+//Creating Flex Containers
+.flex-container{
+  @include flexbox();
+
+  &__item{
+
+  }
+  //Sub class for flex direction
+  &__row{flex-direction: row;}
+  &__column{flex-direction: column;}
+  //Sub class for flex wrap
+  &__wrap{flex-wrap: wrap;}
+  &__nowrap{flex-wrap: nowrap}
+  //Sub class for justifying content (x-axis)
+  &__justify{
+    &-start{justify-content: flex-start;}
+    &-center{justify-content: center;}
+    &-end{justify-content: flex-end;}
+    &-between{justify-content: space-between;}
+    &-around{justify-content: space-around;}
+    &-evenly{justify-content: space-evenly;}
+  }
+  //Sub class for aligning items (y-axis)
+  &__align{
+    &-item-start{align-items: flex-start;}
+    &-item-center{align-items: center;}
+    &-item-end{align-items: flex-end;}
+    &-item-stretch{align-items: stretch;}
+  }
+  //Sub class for aligning items (y-axis)
+  &__align{
+    &-content-start{align-content: flex-start;}
+    &-content-center{align-content: center;}
+    &-content-end{align-content: flex-end;}
+    &-content-stretch{align-content: stretch;}
+  }
+}

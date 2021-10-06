@@ -1,0 +1,264 @@
+//
+//
+//
+// Styles for the website header (both main and mobile)
+// Starts at the top (navbar w/ logo) and ends after the green arrow
+//
+//
+//
+.site-header{
+  background-color: $white;
+  height: 100vh;
+  min-height: 500px;
+  //
+  //
+  //
+  // Full length menu for laptops and monitors
+  //
+  //
+  //
+
+  //Styling main site navigation
+  & .nav{
+    height: 144px;
+    padding-bottom: 10px;
+
+    @media only screen and (max-width: 1000px){
+      display: none;
+    }
+    display: flex;
+    background-color: $white;
+    justify-content: space-around;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    transition: all .2s ease-in-out;
+    //Styling logo on main site navigation
+    & .logo{
+      color: $blue-drk;
+      font-weight: 800;
+      display: inline-block;
+      margin: auto 0;
+
+      & .highlight{
+        transform: translateY(10px);
+      }
+    }
+    //Styles for the main header navigation menu
+    & .menu{
+      display: flex;
+      align-items: center;
+
+      & ul{
+        margin: 0;
+
+        & li{
+          display: inline-block;
+
+          & a{
+            text-transform: uppercase;
+            transition: all .2s ease-in-out;
+            font-family: $content-text;
+            font-weight: 700;
+
+            &:hover{
+              text-decoration: none;
+            }
+          }
+          //Styles for the button on the navbar
+          &:not(:last-child){
+
+            & a{
+            padding: 0 30px;
+            color: $black;
+            font-size: 16px;
+
+            &:hover{
+              color: $green;
+              }
+            }
+          }
+
+          & .button{
+            background-color: $black;
+            margin-left: 30px;
+            font-weight: 800;
+
+            &:hover{
+              background-color: $green;
+              color: $white!important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Styling the main site navigation after scroll
+  & .nav-scrolled{
+    height: 80px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    padding-bottom: 0px;
+
+    @media only screen and (max-width: 1000px){
+      display: none;
+    }
+  }
+  //
+  //
+  //
+  // Responsive menu for smaller screens
+  //
+  //
+  //
+  & .nav-sml{
+    background-color: $white;
+    z-index: 50;
+    height: 80px;
+    width: 100vw;
+    position: fixed;
+    //Disables small navigation on larger screens (Return to default website navigation)
+    @media only screen and (min-width: 1000px){
+      display: none;
+    }
+    @media only screen and (max-width: 500px){
+     height: 60px;
+   }
+     //Mobile Menu Logo
+     & .logo{
+       position: absolute;
+       width: 186px;
+       left: 0;
+       top: 0;
+       padding: 20px 50px;
+       z-index: 50;
+
+       @media only screen and (min-width: 400px){
+         width: 300px;
+         padding-right: 100px;
+       }
+     }
+     //Styles for the mobile menu navigation
+     & .menu-sml{
+       position: absolute;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: $white;
+       height: 300px;
+       width: 100vw;
+       opacity: 0;
+       margin-top: -12px;
+       transform: translateY(-210px);
+       transition: all .4s ease-in-out;
+
+       & .menu-list{
+         transition: all .1s ease-in-out;
+         text-align: center;
+
+         & li{
+           margin: 25px;
+
+           & a{
+             text-transform: uppercase;
+             color: $blue-drk;
+             font-family: $heading-text;
+             font-weight: 800;
+
+             @media only screen and (max-width: 500px){
+       		    font-size: 12px;
+       		  }
+
+             &:hover{
+               text-decoration: none;
+               cursor: pointer;
+               color: rgba($blue-drk, .5);
+             }
+           }
+         }
+       }
+     }
+     //Styles for the mobile menu button (opens and closes the full screen navigation)
+     & .menu-button{
+       &:hover{
+         cursor: pointer;
+       }
+
+
+       & span{
+         font-family: $heading-text;
+         font-weight: 800;
+         color: $blue-drk;
+         background-color: $white;
+         transition: all .3s ease-in-out;
+         position: absolute;
+         right: 50px;
+         top: 23px;
+         z-index: 50;
+         margin-left: 100px;
+
+         @media only screen and (max-width: 500px){
+   		    font-size: 12px;
+   		  }
+       }
+       & .open-{
+         border-bottom: 3px solid $green;
+       }
+       & .close-{
+         border-bottom: 3px solid $blue-drk;
+       }
+     }
+    }
+  //
+  //
+  //
+  // Website hero section
+  //
+  //
+  //
+  & .hero{
+    height: 100%;
+    position: relative;
+
+    &-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 250px;
+      max-width: 1000px;
+      overflow-wrap: normal;
+
+
+      @media only screen and (max-width: 1700px){
+        height: 220px;
+        max-width: 1000px;
+      }
+      @media only screen and (max-width: 1120px){
+        max-width: 800px;
+        left: 0;
+        padding: 0 25px;
+      }
+      @media only screen and (max-width: 600px){
+        width: 100%;
+        margin: auto 0;
+      }
+
+
+      & .heading-lrg{
+        color: $blue-drk;
+        margin-bottom: 25px;
+
+      }
+    }
+  }
+
+  & .hero-arrow{
+    position: absolute;
+    width: 100vw;
+    bottom: 10%;
+    margin: 0 auto;
+  }
+}

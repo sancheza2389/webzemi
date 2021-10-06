@@ -1,0 +1,406 @@
+body,html{
+	background-color: $white!important;
+}
+//section dividers
+.divider{
+
+	& .heading-sub{
+		display: inline-block;
+		color: $white;
+		font-size: 45px;
+		position: relative;
+		text-shadow: -1px -1px 1px rgba(255,255,255,.1),
+								 1px 1px 1px rgba(0,0,0,.5),
+								 -21px -10px 3px rgba(255,250,250,0);
+
+	  @media only screen and (max-width: 800px){
+	    font-size: 25px;
+	  }
+		@media only screen and (max-width: 500px){
+			font-size: 18px;
+		}
+
+		& .capital{
+			padding-right: 5px;
+			text-transform: uppercase;
+			font-size: 70px;
+			position: relative;
+			display: inline-block;
+			transform: translateY(20px);
+			border-bottom: 4px solid $green;
+
+			@media only screen and (max-width: 800px){
+		    font-size: 50px;
+		  }
+			@media only screen and (max-width: 500px){
+		    font-size: 35px;
+				transform: translateY(10px);
+		  }
+		}
+	}
+}
+/*
+
+//Work Section
+
+*/
+.work{
+	background-color: $white;
+	overflow: hidden;
+
+	& .section-content{
+		padding-top: 100px;
+
+		& h1, h2{
+			text-align: center;
+		}
+	}
+
+	& .recent-work{
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 100px;
+
+		& .item{
+			width: 100%;
+			margin: 50px 0;
+			padding-bottom: 100px;
+			z-index: 2;
+
+			@media only screen and (max-width: 1120px){
+				width: 100%;
+				margin: 25px 0;
+			}
+
+			//horizontal dividers behind items
+			&::before{
+				//z-index: 1;
+				position: absolute;
+				left: -50%;
+				display: inline-block;
+				content: "";
+				width: 200vw;
+				height: 400px;
+				margin-top: 50px;
+				border-radius: 2px;
+				box-shadow: 0 0 6px rgba($green, 0.4);
+				-webkit-box-shadow: 0 0 4px rgba($green, 0.4);
+				-moz-box-shadow: 0 0 4px rgba($green, 0.4);
+			  background-position: center;
+
+				@media only screen and (max-width: 1120px){
+					height: calc(100vw * (7/16));
+					margin-top: 20px;
+				}
+			}
+
+			&:nth-of-type(1)::before{
+				background-image: url("https://ik.imagekit.io/webzemi/Untitled_design__18__eTktwQq3Ti.png?updatedAt=1632934557367");
+			}
+			&:nth-of-type(2)::before{
+				background-image: url("https://ik.imagekit.io/webzemi/Untitled_design__21__TDOvnfPVg.png?updatedAt=1632936315358");
+			}
+			&:nth-of-type(3)::before{
+				background-image: url("https://ik.imagekit.io/webzemi/Untitled_design__20__WlXvXqtmC.png?updatedAt=1632936048396");
+			}
+			&:nth-of-type(4)::before{
+				background-image: url("https://ik.imagekit.io/webzemi/Untitled_design__20__TXpMctqWL.png?updatedAt=1632935022392");
+			}
+			//End item dividers
+
+			& .image{
+				position: relative;
+				width: 100%;
+				height: 500px;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+				border-radius: 2px;
+				box-shadow: 0 0 6px rgba(12, 29, 44, 0.4)  ;
+				-webkit-box-shadow: 0 0 4px rgba(12, 29, 44, 0.4)  ;
+				-moz-box-shadow: 0 0 4px rgba(12, 29, 44, 0.4)  ;
+
+				@media only screen and (max-width: 1120px){
+					height: calc(100vw * (9/16));
+				}
+
+				& a{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					z-index: 50;
+
+					&:hover + .text{
+						opacity: 1;
+					}
+				}
+
+				& .text{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background-color: rgba($black, .95);
+					opacity: 0;
+					transition: all .2s ease-in-out;
+
+					& p{
+						font-family: $heading-text;
+						font-size: 35px;
+						font-weight: 800;
+						color: $white;
+						text-transform: uppercase;
+
+						@media only screen and (max-width: 500px){
+					    font-size: 15px;
+					  }
+					}
+				}
+			}
+
+			& .heading{
+				margin-top: 15px;
+				font-size: 16px;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: $heading-text;
+				font-weight: 800;
+				letter-spacing: 2px;
+				display: none;
+				color: $green;
+
+				@media only screen and (max-width: 500px){
+					display: block;
+			  }
+			}
+		}
+	}
+}
+/*
+
+//Capabilities Section
+
+*/
+.capabilities{
+	//Section content
+	& .section-content{
+		max-width: 1200px;
+		position: relative;
+
+		@media only screen and (max-width: 1200px){
+			padding-top: 0px;
+		}
+
+		& .heading{
+			max-width: 900px;
+
+			@media only screen and (max-width: 500px){
+				text-align: center;
+			}
+		}
+
+		& .container{
+			margin: 150px auto;
+			padding: 0;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			text-align: center;
+
+			@media only screen and (max-width: 500px){
+				margin: 50px 0;
+			}
+
+			& .item{
+				width: 33%;
+				padding: 0 55px 70px 0;
+
+				@media only screen and (max-width: 1120px){
+					width: 50%;
+				}
+				@media only screen and (max-width: 500px){
+					width: 100%;
+					padding: 50px 0;
+				}
+
+				& .heading{
+					margin-bottom: 20px;
+					font-size: 26px;
+					font-weight: 800;
+					text-align: left;
+					text-transform: uppercase;
+					font-family: $content-text;
+
+					@media only screen and (max-width: 500px){
+						margin-bottom: 10px;
+						font-size: 18px;
+					}
+				}
+
+				& .text{
+					font-style: $heading-text;
+					font-size: 20px;
+					color: $black;
+					text-align: left;
+
+					@media only screen and (max-width: 500px){
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+/*
+
+//Contact us Section
+
+*/
+.reach-out{
+	padding: 150px 0;
+	background-color: $white;
+	color: $blue-drk;
+
+	@media only screen and (max-width: 500px){
+		padding: 50px 0;
+	}
+	//Styling section container
+	& .section-content{
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1200px;
+
+		@media only screen and (max-width: 1120px){
+			justify-content: center;
+		}
+	}
+
+	//Styling the main heading
+	&-heading{
+		width: 50%;
+
+		@media only screen and (max-width: 1120px){
+			width: 100%;
+		}
+
+		& .heading-sub{
+			font-size: 25px;
+
+			@media only screen and (max-width: 1120px){
+				margin-bottom: 80px;
+			}
+			@media only screen and (max-width: 500px){
+				font-size: 20px;
+			}
+		}
+	}
+	//Styling contact form
+	& form{
+		width: 50%;
+
+		@media only screen and (max-width: 1120px){
+			width: 100%;
+		}
+		//Styling the green "required" label on top of the form
+		& .required:first-of-type {
+			max-width: 500px;
+
+			@media only screen and (max-width: 1120px){
+				max-width: 600px;
+			}
+			@media only screen and (max-width: 680px){
+				max-width: 280px;
+			}
+		}
+		//Styling each form group, including input and label
+		& .form-group{
+			position: relative;
+			//Form inputs
+			& input{
+				padding: 5px 10px;
+				font-size: 15px;
+				margin-bottom: 20px;
+				width: 500px;
+				transition: all .2s ease-in-out;
+
+				@media only screen and (max-width: 1120px){
+					width: 600px;
+				}
+				@media only screen and (max-width: 680px){
+					width: 280px;
+				}
+
+				&:focus{
+					outline: none !important;
+					border: 2px solid $green;
+				}
+				//Green required star
+				& + .required{
+					padding-left: 10px;
+					@media only screen and (max-width: 680px){
+						padding-left: 5px;
+					}
+				}
+				//Editiing placeholder animations
+				&::placeholder{
+					transition: all .2s ease-in-out;
+				}
+				&:focus::placeholder{
+					transform: translateY(-30px);
+				}
+				//Editing Label Animations
+				&:focus + .form-label{
+					transform: translateY(-20px);
+					opacity: 1;
+				}
+			}
+			// Form label
+			& .form-label{
+				left: 0;
+				position: absolute;
+				padding-left: 15px;
+				font-size: 12px;
+				transition: all .2s ease-in-out;
+				opacity: 0;
+				color: rgba($black, .5);
+			}
+			//Form Text area
+			& textarea{
+				padding: 5px 10px;
+				width: 500px;
+				font-size: 15px;
+
+				@media only screen and (max-width: 1120px){
+					width: 600px;
+				}
+				@media only screen and (max-width: 680px){
+					width: 290px;
+				}
+
+				&:focus{
+					outline: none !important;
+					border: 2px solid $green;
+				}
+				//Editiing placeholder animations
+				&::placeholder{
+					transition: all .2s ease-in-out;
+				}
+				&:focus::placeholder{
+					color: transparent;
+				}
+				//Editing Label Animations
+				&:focus + .form-label{
+					transform: translateY(-20px);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
