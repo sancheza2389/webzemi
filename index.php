@@ -138,35 +138,35 @@
     </div>
     <!--   End Contact us heading   -->
     <!--   Contact us Form   -->
-    <form class="form" id="form" action="" method="post">
+    <form class="form" id="form" action="contact.php" method="post">
       <!--   Green required label    -->
       <p class="required text thin">* required fields</p>
       <!--   Name input + label    -->
       <div class="form-group">
-        <input id="name" type="text" name="" value="" placeholder="YOUR NAME" class="text thin">
+        <input id="name" type="text" name="name" value="" placeholder="YOUR NAME" class="text thin">
         <span class="text form-label">YOUR NAME</span>
         <span class="required">*</span>
       </div>
       <!--   Company Name input + label    -->
       <div class="form-group">
-        <input id="companyName" type="text" name="" value="" placeholder="COMPANY NAME" class="text thin">
+        <input id="companyName" type="text" name="companyName" value="" placeholder="COMPANY NAME" class="text thin">
         <span class="text form-label">COMPANY NAME</span>
         <span class="required">*</span>
       </div>
       <!--   Email address input + label    -->
       <div class="form-group">
-        <input id="emailAddress" type="text" name="" value="" placeholder="EMAIL ADDRESS" class="text thin">
+        <input id="emailAddress" type="text" name="email" value="" placeholder="EMAIL ADDRESS" class="text thin">
         <span class="text form-label">EMAIL ADDRESS</span>
         <span class="required">*</span>
       </div>
       <!--   Text Area input + label    -->
       <div class="form-group">
-        <textarea id="describeProject" name="" rows="5" cols="80" style="resize: none;" placeholder="DESCRIBE YOUR PROJECT" class="text thin"></textarea>
+        <textarea id="describeProject" name="message" rows="5" cols="80" style="resize: none;" placeholder="DESCRIBE YOUR PROJECT" class="text thin"></textarea>
         <span class="text form-label">DESCRIBE YOUR PROJECT</span>
       </div>
       <!--   Form Submit Button    -->
       <div class="form-group">
-        <button type="button" name="button" class="button">SUBMIT</button>
+        <button type="button" name="submit" class="button">SUBMIT</button>
       </div>
     </form>
   </div>
