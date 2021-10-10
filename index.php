@@ -142,32 +142,32 @@
       <!--   Green required label    -->
       <p class="required text thin">* required fields</p>
       <!--   Name input + label    -->
-      <div class="form-group">
-        <input id="name" type="text" name="name" value="" placeholder="YOUR NAME" class="text thin">
+      <fieldset class="form-group">
+        <input id="name" type="text" name="name" placeholder="YOUR NAME" class="text thin">
         <span class="text form-label">YOUR NAME</span>
         <span class="required">*</span>
-      </div>
+      </fieldset>
       <!--   Company Name input + label    -->
-      <div class="form-group">
-        <input id="companyName" type="text" name="companyName" value="" placeholder="COMPANY NAME" class="text thin">
+      <fieldset class="form-group">
+        <input id="companyName" type="text" name="companyName" placeholder="COMPANY NAME" class="text thin">
         <span class="text form-label">COMPANY NAME</span>
-        <span class="required">*</span>
-      </div>
+      </fieldset>
       <!--   Email address input + label    -->
-      <div class="form-group">
-        <input id="emailAddress" type="text" name="email" value="" placeholder="EMAIL ADDRESS" class="text thin">
+      <fieldset class="form-group">
+        <input id="emailAddress" type="text" name="email"  placeholder="EMAIL ADDRESS" class="text thin">
         <span class="text form-label">EMAIL ADDRESS</span>
         <span class="required">*</span>
-      </div>
+      </fieldset>
       <!--   Text Area input + label    -->
-      <div class="form-group">
-        <textarea id="describeProject" name="message" rows="5" cols="80" style="resize: none;" placeholder="DESCRIBE YOUR PROJECT" class="text thin"></textarea>
+      <fieldset class="form-group">
+        <textarea  type="text" id="describeProject" name="message" rows="5" cols="80" style="resize: none;" placeholder="DESCRIBE YOUR PROJECT" class="text thin"></textarea>
         <span class="text form-label">DESCRIBE YOUR PROJECT</span>
-      </div>
+        <span class="required">*</span>
+      </fieldset>
       <!--   Form Submit Button    -->
-      <div class="form-group">
-        <button type="button" name="submit" class="button">SUBMIT</button>
-      </div>
+      <fieldset class="form-group">
+        <button type="submit" name="submit" class="button" data-submit="...Sending">SUBMIT</button>
+      </fieldset>
     </form>
   </div>
 </section>

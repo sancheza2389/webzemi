@@ -1,4 +1,3 @@
-
 //
 //
 //       **** HEADER ANIMATIONS ****
@@ -11,7 +10,6 @@ $(window).scroll(function(){
     $('.nav').removeClass('nav-scrolled');
   }
 })
-
 //Mobile nav menu toggle
 function navMenu() {
 
@@ -38,8 +36,6 @@ function navMenu() {
   }
 
 }
-
-
 //smooth scrolling links
 $(function() {
   $('a[href*=\\#]:not([href=\\#])').click(function() {
@@ -54,4 +50,40 @@ $(function() {
       }
     }
   });
+});
+//
+//
+//       **** Form Validation ****
+//
+//
+$(document).ready(function(){
+
+  const constraints = {//validates that the fields are not empty
+    name: {presence:{allowEmpty: false}},
+    email: {presence:{allowEmpty: false}, email: true},//requires valid email address
+    message: {presence:{allowEmpty: false}}
+  };
+
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', function(event){
+
+    const formValues = {
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      message: form.elements.message.value
+    };
+
+    const errors = validate(formValues, constraints);
+
+    if(errors){
+      event.preventDefault();
+      const errorMessage = Object
+                           .values(errors)
+                           .map(function(fieldValues){ return fieldValues.join(', ')})
+                           .join("\n");
+      alert(errorMessage);
+    }
+  }, false);
+
 });
