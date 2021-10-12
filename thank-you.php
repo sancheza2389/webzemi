@@ -1,4 +1,9 @@
- <!DOCTYPE html>
+<?php
+/**
+ * Template Name: Thanks from Webzemi,LLC
+ */
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -21,10 +26,10 @@
     <?php wp_body_open(); ?>
     <section id="thankYou" class="thank-you">
       <div class="back">
-        <button type="button" name="button" class="button">BACK</button>
+        <a href="<?php echo home_url(); ?>" class="button">BACK</a>
       </div>
       <div class="section-content">
-        <img src="https://ik.imagekit.io/webzemi/zemi_hT36B8GgL.png?updatedAt=1634055421018" alt="Webzemi, LLC Logo">
+        <img src="https://ik.imagekit.io/webzemi/logo_webzemi_0HDztInI6?updatedAt=1634060205489" alt="Webzemi, LLC Logo">
         <h1 class="heading heading-lrg bold">Thank you for getting in touch! </h1>
         <h2 class="heading heading-small thin">We appreciate you contacting Webzemi, LLC. One of our colleagues will get back in touch with you soon! Have a great day!</h2>
       </div>

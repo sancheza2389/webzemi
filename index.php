@@ -1,6 +1,10 @@
 <?php
+/**
+ * Template Name: Webzemi,LLC
+ */
 
 $result = "";
+$url = "https://shoesfor.me/thank-you/";
 if(isset($_POST['submit'])){
   require 'phpmailer/PHPMailerAutoload.php';
   $mail = new PHPMailer(true);
@@ -29,6 +33,8 @@ if(isset($_POST['submit'])){
   } else {
     // Display the alert box
 	echo '<script>alert("Thank you! You should be hearing from us soon.")</script>';
+  wp_redirect( $url );
+  exit;
   }
 }
 ?>
@@ -57,7 +63,7 @@ if(isset($_POST['submit'])){
 
       <div class="item">
         <div class=" image" style="background-image: url('https://ik.imagekit.io/webzemi/surreal_RUHQLzbuB-.png?updatedAt=1632676438633')">
-          <a href="#"></a>
+          <a href="https://surrealeyewear.com/"></a>
           <div class="text">
             <p>Visit Site</p>
           </div>
@@ -67,7 +73,7 @@ if(isset($_POST['submit'])){
 
       <div class="item">
         <div class="image" style="background-image: url('https://ik.imagekit.io/webzemi/salt_RFnAehXI4PU.png?updatedAt=1632676451561')">
-          <a href="#"></a>
+          <a href="https://saltrestaurantnj.com/"></a>
           <div class="text">
             <p>Visit Site</p>
           </div>
@@ -77,7 +83,7 @@ if(isset($_POST['submit'])){
 
       <div class="item">
         <div class="image" style="background-image: url('https://ik.imagekit.io/webzemi/plantiful_m00voeEuo.png?updatedAt=1632676445291')">
-          <a href="#"></a>
+          <a href="http://www.plantifulblends.com/"></a>
           <div class="text">
             <p>Visit Site</p>
           </div>
@@ -87,7 +93,7 @@ if(isset($_POST['submit'])){
 
       <div class="item">
         <div class="image" style="background-image: url('https://ik.imagekit.io/webzemi/sushi-room_PsurjtjWS.png?updatedAt=1632676450735')">
-          <a href="#"></a>
+          <a href="http://sushiroomnb.com/"></a>
           <div class="text">
             <p>Visit Site</p>
           </div>
@@ -201,9 +207,8 @@ if(isset($_POST['submit'])){
       </fieldset>
       <!--   Form Submit Button    -->
       <fieldset class="form-group">
-        <button onClick="clearForm()" type="submit" name="submit" class="button" data-submit="...Sending">SUBMIT</button>
+        <button type="submit" name="submit" class="button" data-submit="...Sending">SUBMIT</button>
       </fieldset>
     </form>
   </div>
 </section>
-<a href="thank-you.php">thank you</a>

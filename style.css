@@ -87,7 +87,7 @@ Version: 2.0
     .divider {
       min-height: 250px; } }
   .divider-1 {
-    background-image: url("images/backgrounds/our-work.png"); }
+    background-image: url("https://ik.imagekit.io/webzemi/our-work_nmDHVYegOMX.png?updatedAt=1634068732898"); }
   .divider-2 {
     background-image: url("https://ik.imagekit.io/webzemi/Untitled_design__23__ZSH8Vm7EF.png?updatedAt=1632951801763"); }
 
@@ -712,6 +712,32 @@ table {
 
 body {
   overflow-x: hidden; }
+
+.thank-you {
+  height: 100vh; }
+  .thank-you .back {
+    position: absolute;
+    right: 30px;
+    top: 30px; }
+    .thank-you .back a {
+      font-weight: 800;
+      font-family: "Mulish", sans-serif;
+      color: #fffafa;
+      transition: all .2s ease-in-out; }
+      .thank-you .back a:hover {
+        text-decoration: none;
+        color: #fffafa; }
+  .thank-you .section-content {
+    margin: auto; }
+    .thank-you .section-content img {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      margin-bottom: -50px; }
+    .thank-you .section-content h1, .thank-you .section-content h2 {
+      text-align: center; }
+    .thank-you .section-content h1 {
+      margin-bottom: 50px; }
 
 #wpadminbar {
   display: none; }

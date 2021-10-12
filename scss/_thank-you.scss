@@ -1,0 +1,40 @@
+.thank-you{
+  height: 100vh;
+
+  & .back{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+
+    & a{
+      font-weight: 800;
+      font-family: $heading-text;
+      color: $white;
+      transition: all .2s ease-in-out;
+
+      &:hover{
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+
+  & .section-content{
+    margin: auto;
+
+    & img{
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      margin-bottom: -50px;
+    }
+
+    & h1,h2{
+      text-align: center;
+    }
+
+    & h1{
+      margin-bottom: 50px;
+    }
+  }
+}
