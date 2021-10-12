@@ -69,9 +69,9 @@ $(document).ready(function(){
   form.addEventListener('submit', function(event){
 
     const formValues = {
-      name: form.elements.name.value,
-      email: form.elements.email.value,
-      message: form.elements.message.value
+      name: form.elements.form_name.value,
+      email: form.elements.form_email.value,
+      message: form.elements.form_message.value
     };
 
     const errors = validate(formValues, constraints);
@@ -85,5 +85,12 @@ $(document).ready(function(){
       alert(errorMessage);
     }
   }, false);
-
 });
+// onClick function for submit button that clears the input fields after SUBMIT
+clearForm = ()=> {
+  document.getElementById('name').value = '';
+  document.getElementById('companyName').value = '';
+  document.getElementById('emailAddress').value = '';
+  document.getElementById('describeProject').value = '';
+
+}

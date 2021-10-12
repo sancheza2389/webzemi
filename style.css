@@ -416,6 +416,8 @@ body, html {
       margin: 50px 0;
       padding-bottom: 100px;
       z-index: 2; }
+      .work .recent-work .item:last-of-type {
+        padding-bottom: 0; }
       @media only screen and (max-width: 1120px) {
         .work .recent-work .item {
           width: 100%;
@@ -508,57 +510,59 @@ body, html {
 //Capabilities Section
 
 */
-.capabilities .section-content {
-  max-width: 1200px;
-  position: relative; }
-  @media only screen and (max-width: 1200px) {
-    .capabilities .section-content {
-      padding-top: 0px; } }
-  .capabilities .section-content .heading {
-    max-width: 900px; }
-    @media only screen and (max-width: 500px) {
-      .capabilities .section-content .heading {
-        text-align: center; } }
-  .capabilities .section-content .container {
-    margin: 150px auto;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center; }
-    @media only screen and (max-width: 500px) {
-      .capabilities .section-content .container {
-        margin: 50px 0; } }
-    .capabilities .section-content .container .item {
-      width: 33%;
-      padding: 0 55px 70px 0; }
-      @media only screen and (max-width: 1120px) {
-        .capabilities .section-content .container .item {
-          width: 50%; } }
+.capabilities {
+  padding-top: 100px; }
+  .capabilities .section-content {
+    max-width: 1200px;
+    position: relative; }
+    @media only screen and (max-width: 1200px) {
+      .capabilities .section-content {
+        padding-top: 0px; } }
+    .capabilities .section-content .heading {
+      max-width: 900px; }
       @media only screen and (max-width: 500px) {
-        .capabilities .section-content .container .item {
-          width: 100%;
-          padding: 50px 0; } }
-      .capabilities .section-content .container .item .heading {
-        margin-bottom: 20px;
-        font-size: 26px;
-        font-weight: 800;
-        text-align: left;
-        text-transform: uppercase;
-        font-family: "Lato", sans-serif; }
+        .capabilities .section-content .heading {
+          text-align: center; } }
+    .capabilities .section-content .container {
+      margin: 150px auto;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center; }
+      @media only screen and (max-width: 500px) {
+        .capabilities .section-content .container {
+          margin: 50px 0; } }
+      .capabilities .section-content .container .item {
+        width: 33%;
+        padding: 0 55px 70px 0; }
+        @media only screen and (max-width: 1120px) {
+          .capabilities .section-content .container .item {
+            width: 50%; } }
         @media only screen and (max-width: 500px) {
-          .capabilities .section-content .container .item .heading {
-            margin-bottom: 10px;
-            font-size: 18px; } }
-      .capabilities .section-content .container .item .text {
-        font-style: "Mulish", sans-serif;
-        font-size: 20px;
-        color: #0c1d2c;
-        text-align: left; }
-        @media only screen and (max-width: 500px) {
-          .capabilities .section-content .container .item .text {
-            font-size: 15px; } }
+          .capabilities .section-content .container .item {
+            width: 100%;
+            padding: 50px 0; } }
+        .capabilities .section-content .container .item .heading {
+          margin-bottom: 20px;
+          font-size: 26px;
+          font-weight: 800;
+          text-align: left;
+          text-transform: uppercase;
+          font-family: "Lato", sans-serif; }
+          @media only screen and (max-width: 500px) {
+            .capabilities .section-content .container .item .heading {
+              margin-bottom: 10px;
+              font-size: 18px; } }
+        .capabilities .section-content .container .item .text {
+          font-style: "Mulish", sans-serif;
+          font-size: 20px;
+          color: #0c1d2c;
+          text-align: left; }
+          @media only screen and (max-width: 500px) {
+            .capabilities .section-content .container .item .text {
+              font-size: 15px; } }
 
 /*
 

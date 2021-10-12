@@ -67,6 +67,10 @@ body,html{
 			padding-bottom: 100px;
 			z-index: 2;
 
+			&:last-of-type{
+				padding-bottom: 0;
+			}
+
 			@media only screen and (max-width: 1120px){
 				width: 100%;
 				margin: 25px 0;
@@ -188,6 +192,7 @@ body,html{
 
 */
 .capabilities{
+	padding-top: 100px;
 	//Section content
 	& .section-content{
 		max-width: 1200px;

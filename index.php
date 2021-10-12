@@ -1,3 +1,37 @@
+<?php
+
+$result = "";
+if(isset($_POST['submit'])){
+  require 'phpmailer/PHPMailerAutoload.php';
+  $mail = new PHPMailer(true);
+
+  $mail->Host = 'smtp.gmail.com';
+  $mail->SMTPDebug = 2;
+  $mail->Port = 25;
+  $mail->SMTPauth = true;
+  $mail->SMTPSecure = 'ssl';
+  // $mail->SMTPSecure = 'tls';
+  $mail->Username = 'alex.sanchez.webdev@gmail.com';
+  $mail->Password = '2theM@@n';
+
+  $mail->setFrom($_POST['form_email']);
+  $mail->addAddress('info@webzemi.com');
+  $mail->addReplyTo($_POST['form_email']);
+
+  $mail->isHTML(true);
+  $mail->Subject = 'New Email from potential client! (Webzemi.com)';
+  $mail->Body = '<h2 align=center>New email from '.$_POST['form_name'].' with '.$_POST['companyName'].'</h2><br />
+                 <p>'.$_POST['form_message'].'</p>';
+
+  if (!$mail->send()) {
+    // Display the alert box
+	echo '<script>alert("Somthing went wrong. Please try again.")</script>';
+  } else {
+    // Display the alert box
+	echo '<script>alert("Thank you! You should be hearing from us soon.")</script>';
+  }
+}
+?>
 <?php get_header(); ?>
 
 <!--    ***Divider***     -->
@@ -128,6 +162,7 @@
   *Section 4: Contact Us
 
 -->
+<iframe name="votar" style="display:none;"></iframe>
 <section class="reach-out" id="reach-out">
 
   <div class="section-content">
@@ -138,12 +173,12 @@
     </div>
     <!--   End Contact us heading   -->
     <!--   Contact us Form   -->
-    <form class="form" id="form" action="contact.php" method="post">
+    <form class="form" id="form" action="index.php" method="post">
       <!--   Green required label    -->
       <p class="required text thin">* required fields</p>
       <!--   Name input + label    -->
       <fieldset class="form-group">
-        <input id="name" type="text" name="name" placeholder="YOUR NAME" class="text thin">
+        <input id="name" type="text" name="form_name" placeholder="YOUR NAME" class="text thin">
         <span class="text form-label">YOUR NAME</span>
         <span class="required">*</span>
       </fieldset>
@@ -154,20 +189,21 @@
       </fieldset>
       <!--   Email address input + label    -->
       <fieldset class="form-group">
-        <input id="emailAddress" type="text" name="email"  placeholder="EMAIL ADDRESS" class="text thin">
+        <input id="emailAddress" type="text" name="form_email"  placeholder="EMAIL ADDRESS" class="text thin">
         <span class="text form-label">EMAIL ADDRESS</span>
         <span class="required">*</span>
       </fieldset>
       <!--   Text Area input + label    -->
       <fieldset class="form-group">
-        <textarea  type="text" id="describeProject" name="message" rows="5" cols="80" style="resize: none;" placeholder="DESCRIBE YOUR PROJECT" class="text thin"></textarea>
+        <textarea  type="text" id="describeProject" name="form_message" rows="5" cols="80" style="resize: none;" placeholder="DESCRIBE YOUR PROJECT" class="text thin"></textarea>
         <span class="text form-label">DESCRIBE YOUR PROJECT</span>
         <span class="required">*</span>
       </fieldset>
       <!--   Form Submit Button    -->
       <fieldset class="form-group">
-        <button type="submit" name="submit" class="button" data-submit="...Sending">SUBMIT</button>
+        <button onClick="clearForm()" type="submit" name="submit" class="button" data-submit="...Sending">SUBMIT</button>
       </fieldset>
     </form>
   </div>
 </section>
+<a href="thank-you.php">thank you</a>
