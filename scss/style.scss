@@ -1,0 +1,29 @@
+/*
+Theme Name: Webzemi Main Theme
+Theme URI:
+Author: Alexander Sanchez
+Author URI: https://webzemi.com
+Description: Custom theme for Webzemi,Inc.
+Version: 2.0
+*/
+//Importing Partial File
+@import "variables";
+@import "buttons";
+@import "components";
+@import "flex";
+@import "footer";
+@import "forms";
+@import "functions";
+@import "header";
+@import "home";
+@import "mixins";
+@import "reset";
+@import "slider";
+@import "typography";
+@import "navigation";
+@import "thank-you";
+
+
+#wpadminbar{
+  display: none;
+}
