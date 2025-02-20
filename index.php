@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
   $mail->SMTPauth = true;
   $mail->SMTPSecure = 'ssl';
   // $mail->SMTPSecure = 'tls';
-  $mail->Username = 'alex.sanchez.webdev@gmail.com';
+  $mail->Username = 'webzemi@gmail.com';
   $mail->Password = '********';
 
   $mail->setFrom($_POST['form_email']);
