@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
   $mail->SMTPSecure = 'ssl';
   // $mail->SMTPSecure = 'tls';
   $mail->Username = 'alex.sanchez.webdev@gmail.com';
-  $mail->Password = '2theM@@n';
+  $mail->Password = '********';
 
   $mail->setFrom($_POST['form_email']);
   $mail->addAddress('info@webzemi.com');
